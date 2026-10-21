@@ -1,128 +1,122 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Laurea in Ingegneria Informatica</title>
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --text: #f8fafc;
-      --accent: #ef4444; /* Rosso laurea */
-      --muted: #94a3b8;
-    }
-    body {
-      margin: 0;
-      padding: 2rem 1rem;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
-    .card {
-      background: var(--card-bg);
-      border-radius: 16px;
-      padding: 2rem;
-      max-width: 440px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-    .badge {
-      display: inline-block;
-      font-family: monospace;
-      font-size: 0.85rem;
-      background: rgba(239, 68, 68, 0.15);
-      color: var(--accent);
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      margin-bottom: 1rem;
-      border: 1px solid rgba(239, 68, 68, 0.3);
-    }
-    .hero-img {
-      width: 140px;
-      height: 140px;
-      object-fit: contain;
-      margin: 0.5rem auto 1.5rem auto;
-      display: block;
-      border-radius: 12px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-    h2 {
-      margin: 0.35rem 0 1.25rem 0;
-      font-size: 1rem;
-      color: var(--muted);
-      font-weight: 400;
-    }
-    p {
-      line-height: 1.6;
-      color: #cbd5e1;
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
-    .code-quote {
-      font-family: "Fira Code", monospace;
-      background: #090d16;
-      padding: 0.75rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      color: #38bdf8;
-      text-align: left;
-      margin-bottom: 1.5rem;
-      border-left: 3px solid var(--accent);
-    }
-    .btn {
-      display: inline-block;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 0.8rem;
-      background: var(--accent);
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 8px;
-      transition: opacity 0.2s;
-    }
-    .btn:hover {
-      opacity: 0.9;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="card">
-    <span class="badge">&lt;status: graduated /&gt;</span>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laurea Carmine Peluso</title>
+    <!-- Tailwind CSS per lo stile moderno e responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts per un tocco elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
-    <!-- Sostituisci il link con l'immagine della copertina o della corona -->
-    <img class="hero-img" src="corona.avif" alt="Corona d'alloro">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'laurea-red': '#8b0000', // Rosso scuro elegante tipico della laurea
+                        'laurea-light': '#fdf8f8',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'bounce-slow': 'bounce 3s infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* Sfondo con un leggero gradiente elegante */
+            background: linear-gradient(135deg, #fdf8f8 0%, #f5e6e6 100%);
+            min-height: 100vh;
+        }
+        
+        /* Ritardi per l'animazione degli elementi */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.3s; }
+        .delay-300 { animation-delay: 0.5s; }
+        .delay-400 { animation-delay: 0.7s; }
+    </style>
+</head>
+<body class="flex items-center justify-center p-4 font-sans text-gray-800">
 
-    <h1>Nome e Cognome</h1>
-    <h2>Ingegneria Informatica</h2>
+    <!-- Card Principale -->
+    <main class="bg-white/80 backdrop-blur-sm shadow-2xl rounded-3xl w-full max-w-md overflow-hidden border border-red-100 relative">
+        
+        <!-- Decorazione superiore -->
+        <div class="h-3 w-full bg-laurea-red"></div>
 
-    <div class="code-quote">
-      // 3 anni di righe di codice, commit e traguardi<br>
-      System.out.println("Grazie per aver condiviso questo giorno con me!");
-    </div>
+        <div class="p-8 flex flex-col items-center text-center">
+            
+            <!-- Intestazione -->
+            <header class="opacity-0 animate-fade-in-up delay-100 mb-6">
+                <h2 class="text-sm font-semibold tracking-widest text-laurea-red uppercase mb-2">
+                    Laurea in Ingegneria Informatica
+                </h2>
+                <h1 class="text-4xl font-serif text-gray-900 font-bold leading-tight">
+                    Carmine <br> Peluso
+                </h1>
+                <div class="w-16 h-1 bg-laurea-red mx-auto mt-4 rounded-full"></div>
+            </header>
 
-    <p>
-      Il supporto e la presenza di chi mi è stato vicino sono stati il compilatore migliore per completare questo percorso. Grazie di cuore per esserci stati!
-    </p>
+            <!-- Avatar Animato / GIF -->
+            <!-- ISTRUZIONI: Per usare la tua GIF, sostituisci il link in 'src' con il percorso della tua GIF (es. 'img/mio-avatar.gif') -->
+            <div class="opacity-0 animate-fade-in-up delay-200 mb-8 relative">
+                <div class="w-36 h-36 rounded-full p-1 bg-gradient-to-tr from-laurea-red to-red-400 shadow-lg flex items-center justify-center">
+                    <img 
+                        src="https://placehold.co/400x400/8b0000/ffffff?text=Avatar+Qui" 
+                        alt="Avatar Laurea Carmine" 
+                        class="w-full h-full object-cover rounded-full border-4 border-white"
+                    >
+                </div>
+                <!-- Icona decorativa (cappello di laurea) -->
+                <div class="absolute -bottom-2 -right-2 bg-white rounded-full p-2 shadow-md text-2xl">
+                    🎓
+                </div>
+            </div>
 
-    <!-- Tasto per sfogliare la tesi o vedere le foto -->
-    <a href="link-al-pdf-della-tesi.pdf" class="btn" target="_blank">
-      Sfoglia la Tesi
-    </a>
-  </div>
+            <!-- Ringraziamenti -->
+            <section class="opacity-0 animate-fade-in-up delay-300 mb-6">
+                <h3 class="font-serif text-2xl mb-3 text-laurea-red">Grazie di cuore</h3>
+                <p class="text-gray-600 leading-relaxed text-sm">
+                    Avervi qui a festeggiare questo traguardo rende questa giornata indimenticabile. Grazie per il vostro supporto, la vostra amicizia e per aver condiviso questa gioia con me.
+                </p>
+            </section>
+
+            <!-- Sezione Tesi -->
+            <section class="opacity-0 animate-fade-in-up delay-400 mb-8 bg-red-50 rounded-2xl p-5 border border-red-100 w-full">
+                <h4 class="font-bold text-sm text-gray-800 mb-2 uppercase tracking-wide flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 text-laurea-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    Il mio Progetto di Tesi
+                </h4>
+                <!-- ISTRUZIONI: Modifica il testo qui sotto con l'argomento reale della tua tesi -->
+                <p class="text-xs text-gray-600 italic">
+                    "Un'analisi approfondita sull'implementazione di algoritmi avanzati e architetture software innovative per la risoluzione di problemi complessi."
+                </p>
+            </section>
+
+            <!-- Bottone Tesi -->
+            <div class="opacity-0 animate-fade-in-up delay-400 w-full mt-2">
+                <!-- ISTRUZIONI: Il link 'href' punta a 'tesi.pdf'. Assicurati che il file si chiami così e si trovi nella stessa cartella di questa pagina -->
+                <a href="tesi.pdf" target="_blank" class="group relative flex w-full justify-center items-center gap-3 bg-laurea-red hover:bg-red-900 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300">
+                    <span>Leggi la mia Tesi</span>
+                    <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+
+        </div>
+    </main>
 
 </body>
 </html>
